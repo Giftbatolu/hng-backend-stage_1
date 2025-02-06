@@ -17,10 +17,10 @@ app.get('/api/classify-number', async (req, res) => {
     const { num } = req.query
     let parsedNum = parseInt(num);
     if (isNaN(parsedNum)) {
-       return  res.json({number: num, error: true})
+       return  res.status(400).json({number: num, error: true})
     }
     const funFact = await fetchFunFact(num)
-    res.json(   { 
+    res.status(200).json(   { 
                 number: parsedNum,
                 is_prime: isPrime(num),
                 is_perfet: isPerectNum(num),

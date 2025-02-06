@@ -37,11 +37,12 @@ npm install
 ## Usage
 To use the API, send a `GET` request to the following endpoint:
 ```
-GET http://<your-domain.com>/api/classify-number?number=<number>
+GET https://number-classfier.vercel.app/api/classify-number?num=351
 ```
 
 ## Deployment
 The API has been deployed to vercel. You can access it at:
+[https://number-classfier.vercel.app](https://number-classfier.vercel.app)
 
 ## API Documentation
 
