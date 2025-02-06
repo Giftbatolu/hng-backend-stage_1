@@ -10,7 +10,7 @@ const app = express();
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send('Welcome to HNG Backend Stade 1')
+    res.send('Welcome to HNG Backend Stage 1 Task - Number Classfication API Developed by Oyelami Sekinat')
 })
 
 app.get('/api/classify-number', async (req, res) => {
