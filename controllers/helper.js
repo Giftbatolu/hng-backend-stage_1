@@ -47,6 +47,7 @@ const isArmstrong = (num) => {
     let tempNum = num;
     let sum = 0;
     let numLen = num.toString().length
+    let powernum = parseInt(numLen)
     while (tempNum > 0) {
         let last_digit = tempNum % 10;
         sum += Math.pow(last_digit, numLen)
@@ -79,6 +80,16 @@ const properties =(isArmstrong, isEvenOld, num) => {
         return ['old']
     }
 }
+
+// let num = 371;
+// const armNum = isArmstrong(370)
+// const parity = num % 2 === 0 ? "even" : "old";
+// const properties = [];
+// if (isArmstrong) properties.push("armstrong")
+// properties.push(parity)
+// console.log(armNum)
+// console.log(properties)
+
 
 // armstrog num - 9474, 1634. 8208, 153, 370, 371,407
 // console.log(isPrime(num))
