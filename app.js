@@ -13,10 +13,10 @@ app.get('/', (req, res) => {
 
 app.get('/api/classify-number', async (req, res) => {
     const { num } = req.query
-    let parsedNum = parseInt(num);
-    if (isNaN(parsedNum) || !num) {
+    if (isNaN(num) || !num) {
        return  res.status(400).json({number: num, error: true})
     }
+    let parsedNum = parseInt(num);
 
     const funFact = await fetchFunFact(num)
 
