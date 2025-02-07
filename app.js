@@ -21,12 +21,12 @@ app.get('/api/classify-number', async (req, res) => {
     const funFact = await fetchFunFact(num)
 
     res.status(200).json(   { 
-                number: parsedNum,
-                is_prime: isPrime(parsedNum),
-                digit_sum: digitSum(parsedNum),
-                is_perfet: isPerectNum(parsedNum),
-                properties: properties(isArmstrong, isEvenOld, parsedNum),
-                fun_fact: funFact
+            number: parsedNum,
+            is_prime: isPrime(parsedNum),
+            is_perfet: isPerectNum(parsedNum),
+            properties: properties(isArmstrong, isEvenOld, parsedNum),
+            digit_sum: digitSum(parsedNum),
+            fun_fact: funFact
             })
 })
 
